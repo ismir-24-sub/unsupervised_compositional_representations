@@ -8,3 +8,18 @@ Current generative models are able to generate high-quality artefacts but have b
   <img src="imgs/model.png"/>
 </p>
 
+## Reconstructions
+
+Here, we show some *non-cherry-picked* examples of the reconstructions obtained by our model on the Slakh2100 test set. **Warning**: lower the volume before playing the audio files, as they may be loud.
+
+| Sample | Original                                                                  | Reconstruction                                                           |
+|--------|---------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 1      | <audio src="audio/rec/orig_1.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_1.wav" controls style="width:  200px"></audio> |
+| 2      | <audio src="audio/rec/orig_2.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_2.wav" controls style="width:  200px"></audio> |
+| 3      | <audio src="audio/rec/orig_3.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_3.wav" controls style="width:  200px"></audio> |
+
+## Separations
+
+
+
+### Drums + Bass

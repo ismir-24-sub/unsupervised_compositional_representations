@@ -1,4 +1,4 @@
-# Unsupervised Composable Representations For Audio
+# Unsupervised Composable Representations For Audio 
 
 ## Abstract
 
@@ -20,6 +20,24 @@ Here, we show some *non-cherry-picked* examples of the reconstructions obtained 
 
 ## Separations
 
-
+Here, we show some *non-cherry-picked* examples of the separations obtained by our model on the Slakh2100 test set (*Drums + Bass*). **Warning**: lower the volume before playing the audio files, as they may be loud.
 
 ### Drums + Bass
+
+| Sample | Original                                                             | Bass (original)                                                           | Bass (ours)                                                                    | Drums (original)                                                           | Drums (ours)                                                                    |
+|--------|----------------------------------------------------------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| 1      | <audio src="audio/sep/ours/1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_drums_ours.wav" controls style="width:  200px"></audio> |
+| 2      | <audio src="audio/sep/ours/2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_drums_ours.wav" controls style="width:  200px"></audio> |
+| 3      | <audio src="audio/sep/ours/3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_drums_ours.wav" controls style="width:  200px"></audio> |
+
+### Bass + Piano
+
+Here, we show some *non-cherry-picked* examples of the separations obtained by our model on the Slakh2100 test set (*Bass + Piano*). **Warning**: lower the volume before playing the audio files, as they may be loud.
+
+| Sample | Original                                                                     | Bass (original)                                                                   | Bass (ours)                                                                            | Piano (original)                                                                   | Piano (ours)                                                                            |
+|--------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| 1      | <audio src="audio/sep/ours_dp/1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/1_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/1_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/1_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/1_piano_ours.wav" controls style="width:  200px"></audio> |
+| 2      | <audio src="audio/sep/ours_dp/2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_piano_ours.wav" controls style="width:  200px"></audio> |
+| 3      | <audio src="audio/sep/ours_dp/3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano_ours.wav" controls style="width:  200px"></audio> |
+
+## Generations

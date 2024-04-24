@@ -41,3 +41,47 @@ Here, we show some *non-cherry-picked* examples of the separations obtained by o
 | 3      | <audio src="audio/sep/ours_dp/3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano_ours.wav" controls style="width:  200px"></audio> |
 
 ## Generations
+
+In this section, we show the results obtained with the recomposition model. We show the results of the model in two different settings: partial generations and unconditional generations. In the first case, we show the results of the model when we condition the generation on one of the sources (e.g., drums or bass) and generate the other source. In the second case, we show the results of the model when we generate the full mixtures without conditioning on any source.
+
+### Partial generations
+
+Here, we show some *non-cherry-picked* examples of the partial generations obtained by our model on the Slakh2100 test set. **Warning**: lower the volume before playing the audio files, as they may be loud.
+
+#### Drums given bass
+
+|   | Real                                                                               | Generated                                                                              |
+|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| 1 | <audio src="audio/gen-var/drums/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/1_gen.wav" controls style="width:  200px"></audio> |
+| 2 | <audio src="audio/gen-var/drums/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/2_gen.wav" controls style="width:  200px"></audio> |
+| 3 | <audio src="audio/gen-var/drums/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/3_gen.wav" controls style="width:  200px"></audio> |
+
+#### Bass given drums
+
+|   | Real                                                                               | Generated                                                                              |
+|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| 1 | <audio src="audio/gen-var/bass/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/1_gen.wav" controls style="width:  200px"></audio> |
+| 2 | <audio src="audio/gen-var/bass/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/2_gen.wav" controls style="width:  200px"></audio> |
+| 3 | <audio src="audio/gen-var/bass/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/3_gen.wav" controls style="width:  200px"></audio> |
+
+### Unconditional generations
+
+Here, we show some *non-cherry-picked* examples of the generations obtained by our model on the Slakh2100 test set. **Warning**: lower the volume before playing the audio files, as they may be loud.
+
+Before listening to the generations, we recommend listening to the original samples to get a sense of the dataset.
+
+#### Original samples
+
+| Sample | Audio                                                                     |
+|--------|---------------------------------------------------------------------------|
+| 1      | <audio src="audio/gen/orig/1.wav" controls style="width:  200px"></audio> |
+| 2      | <audio src="audio/gen/orig/2.wav" controls style="width:  200px"></audio> |
+| 3      | <audio src="audio/gen/orig/3.wav" controls style="width:  200px"></audio> |
+
+#### Generated samples
+
+| Sample | Audio                                                                    |
+|--------|--------------------------------------------------------------------------|
+| 1      | <audio src="audio/gen/gen/1.wav" controls style="width:  200px"></audio> |
+| 2      | <audio src="audio/gen/gen/2.wav" controls style="width:  200px"></audio> |
+| 3      | <audio src="audio/gen/gen/3.wav" controls style="width:  200px"></audio> |

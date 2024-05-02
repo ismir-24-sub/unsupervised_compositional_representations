@@ -17,6 +17,8 @@ Here, we show some *non-cherry-picked* examples of the reconstructions obtained 
 | 1      | <audio src="audio/rec/orig_1.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_1.wav" controls style="width:  200px"></audio> |
 | 2      | <audio src="audio/rec/orig_2.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_2.wav" controls style="width:  200px"></audio> |
 | 3      | <audio src="audio/rec/orig_3.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_3.wav" controls style="width:  200px"></audio> |
+| 4      | <audio src="audio/rec/orig_4.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_4.wav" controls style="width:  200px"></audio> |
+| 5      | <audio src="audio/rec/orig_5.wav" controls style="width:  200px"></audio> | <audio src="audio/rec/rec_5.wav" controls style="width:  200px"></audio> |
 
 ## Separations
 
@@ -29,6 +31,9 @@ Here, we show some *non-cherry-picked* examples of the separations obtained by o
 | 1      | <audio src="audio/sep/ours/1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/1_drums_ours.wav" controls style="width:  200px"></audio> |
 | 2      | <audio src="audio/sep/ours/2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/2_drums_ours.wav" controls style="width:  200px"></audio> |
 | 3      | <audio src="audio/sep/ours/3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/3_drums_ours.wav" controls style="width:  200px"></audio> |
+| 4      | <audio src="audio/sep/ours/4.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/4_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/4_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/4_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/4_drums_ours.wav" controls style="width:  200px"></audio> |
+| 5      | <audio src="audio/sep/ours/5.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/5_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/5_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/5_drums.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours/5_drums_ours.wav" controls style="width:  200px"></audio> |
+
 
 ### Bass + Piano
 
@@ -40,29 +45,24 @@ Here, we show some *non-cherry-picked* examples of the separations obtained by o
 | 2      | <audio src="audio/sep/ours_dp/2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/2_piano_ours.wav" controls style="width:  200px"></audio> |
 | 3      | <audio src="audio/sep/ours_dp/3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_bass_ours.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dp/3_piano_ours.wav" controls style="width:  200px"></audio> |
 
+### Drums + Bass + Piano
+
+Here, we show some *non-cherry-picked* examples of the separations obtained by our model on the Slakh2100 test set (*Drums + Bass + Piano*). **Warning**: lower the volume before playing the audio files, as they may be loud. We used 3 latent variables instead of 2, but kept the same hyper-parameters as the *Drums + Bass* experiments. While our model degrades in quality by encoding some high-frequency content of the piano into the hi-hats, it still manages to separate the sources.
+
++---+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+|   | Sample                                                                             | Bass (original)                                                                    | Bass (ours)                                                                             | Drums (original)                                                                    | Drums (ours)                                                                             | Piano (original)                                                                    | Piano (ours)                                                                             |
++---+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 1 | <audio src="audio/sep/ours_dpb/real_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_ours_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_ours_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_1.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_ours_1.wav" controls style="width:  200px"></audio> |
++---+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 2 | <audio src="audio/sep/ours_dpb/real_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_ours_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_ours_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_2.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_ours_2.wav" controls style="width:  200px"></audio> |
++---+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+| 3 | <audio src="audio/sep/ours_dpb/real_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/bass_ours_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/drums_ours_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_3.wav" controls style="width:  200px"></audio> | <audio src="audio/sep/ours_dpb/piano_ours_3.wav" controls style="width:  200px"></audio> |
++---+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+
 ## Generations
 
-In this section, we show the results obtained with the recomposition model. We show the results of the model in two different settings: partial generations and unconditional generations. In the first case, we show the results of the model when we condition the generation on one of the sources (e.g., drums or bass) and generate the other source. In the second case, we show the results of the model when we generate the full mixtures without conditioning on any source.
+In this section, we show the results obtained with the recomposition model. We show the results of the model in two different settings: unconditional generations and partial generations. In the first case, we show the results of the model when we generate the full mixtures without conditioning on any source. In the second case, we show the results of the model when we condition the generation on one of the sources (e.g., drums or bass) and generate the other source.
 
-### Partial generations
-
-Here, we show some *non-cherry-picked* examples of the partial generations obtained by our model on the Slakh2100 test set. **Warning**: lower the volume before playing the audio files, as they may be loud.
-
-#### Drums given bass
-
-|   | Real                                                                               | Generated                                                                              |
-|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| 1 | <audio src="audio/gen-var/drums/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/1_gen.wav" controls style="width:  200px"></audio> |
-| 2 | <audio src="audio/gen-var/drums/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/2_gen.wav" controls style="width:  200px"></audio> |
-| 3 | <audio src="audio/gen-var/drums/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/3_gen.wav" controls style="width:  200px"></audio> |
-
-#### Bass given drums
-
-|   | Real                                                                               | Generated                                                                              |
-|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| 1 | <audio src="audio/gen-var/bass/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/1_gen.wav" controls style="width:  200px"></audio> |
-| 2 | <audio src="audio/gen-var/bass/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/2_gen.wav" controls style="width:  200px"></audio> |
-| 3 | <audio src="audio/gen-var/bass/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/3_gen.wav" controls style="width:  200px"></audio> |
 
 ### Unconditional generations
 
@@ -85,3 +85,23 @@ Before listening to the generations, we recommend listening to the original samp
 | 1      | <audio src="audio/gen/gen/1.wav" controls style="width:  200px"></audio> |
 | 2      | <audio src="audio/gen/gen/2.wav" controls style="width:  200px"></audio> |
 | 3      | <audio src="audio/gen/gen/3.wav" controls style="width:  200px"></audio> |
+
+### Partial generations
+
+Here, we show some *non-cherry-picked* examples of the partial generations obtained by our model on the Slakh2100 test set. **Warning**: lower the volume before playing the audio files, as they may be loud.
+
+#### Drums given bass
+
+|   | Real                                                                               | Generated                                                                              |
+|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| 1 | <audio src="audio/gen-var/drums/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/1_gen.wav" controls style="width:  200px"></audio> |
+| 2 | <audio src="audio/gen-var/drums/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/2_gen.wav" controls style="width:  200px"></audio> |
+| 3 | <audio src="audio/gen-var/drums/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/drums/3_gen.wav" controls style="width:  200px"></audio> |
+
+#### Bass given drums
+
+|   | Real                                                                               | Generated                                                                              |
+|---|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| 1 | <audio src="audio/gen-var/bass/1.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/1_gen.wav" controls style="width:  200px"></audio> |
+| 2 | <audio src="audio/gen-var/bass/2.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/2_gen.wav" controls style="width:  200px"></audio> |
+| 3 | <audio src="audio/gen-var/bass/3.wav" controls style="width:  200px"></audio> | <audio src="audio/gen-var/bass/3_gen.wav" controls style="width:  200px"></audio> |

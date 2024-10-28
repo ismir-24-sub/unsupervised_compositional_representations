@@ -1,2 +1,5 @@
 down.sh
 *DS_Store
+__pycache__
+runs/
+unet_2.py

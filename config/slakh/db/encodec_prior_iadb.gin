@@ -1,0 +1,62 @@
+ACT = "silu"
+IN_DIM = 2
+BATCH_SIZE = 64
+ADD_MASK = True
+T_DIM = 2
+
+# Network
+
+UNet:
+    channels = [%IN_DIM, 64, 128, 256, 512]
+    kernels = [3, 3, 3, 3]
+    strides = [1, 2, 2, 2]
+    attn = [0, 0, 0, 1]
+    cond_dim = 128
+    tcond_dim = %T_DIM
+    factor = 1000.0
+    norm = "gn"
+    activation = %ACT
+    skip_type = "cat"
+    p_drop = 0.1
+    bias = True
+    use_nearest = False
+
+# Data
+
+SLK_TRAIN_ENCODEC_DB:
+    lmdb_path = "/data/giovanni/datasets/slakh/proper_slakh_encodec_db_train_168000"
+
+SLK_VALID_ENCODEC_DB:
+    lmdb_path = "/data/giovanni/datasets/slakh/proper_slakh_encodec_db_validation_168000"
+
+train/DataLoader:
+    dataset = @SLK_TRAIN_ENCODEC_DB()
+    batch_size = %BATCH_SIZE
+    num_workers = 4
+    shuffle = True
+    drop_last = True
+    collate_fn = @collate_crop
+
+val/DataLoader:
+    dataset = @SLK_VALID_ENCODEC_DB()
+    batch_size = %BATCH_SIZE
+    num_workers = 0
+    shuffle = True
+    drop_last = False
+    generator = @generator()
+    collate_fn = @collate_crop
+
+MaskingLatentIADB:
+    sources = ["drums", "bass"]
+    p_drop = 0.5
+    add_mask_cond = %ADD_MASK
+    model = @UNet()
+    train_dl = @train/DataLoader()
+    val_dl = @val/DataLoader()
+    reduce_fn = "mean"
+    val_every = 10
+    checkpoint = True
+    norm_dict = None
+    max_grad_norm = None
+    lr_warmup = 0
+    use_ema = False

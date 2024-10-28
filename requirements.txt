@@ -1,0 +1,11 @@
+torch
+torchaudio
+lmdb
+einops
+tqdm
+tensorboard
+numpy
+gin-config
+udls
+museval
+librosa
